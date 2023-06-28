@@ -1,0 +1,22 @@
+# The program to run
+program: train.py
+
+# Method can be grid, random or bayes
+method: random
+
+# Project this sweep is part of
+project: mlops-001-lmdGPT
+
+# Metric to optimize
+metric:
+  name: eval/loss
+  goal: minimize
+
+# Parameters space to search
+parameters:
+  learning_rate:
+    distribution: log_uniform_values
+    min: 5e-4
+    max: 3e-3
+  gradient_accumulation_steps:
+    values: [1, 2]
