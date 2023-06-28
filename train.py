@@ -21,7 +21,7 @@ CONTEXT_LENGTH = 2048
 # Commented parameters correspond to the small model
 default_config = SimpleNamespace(
     output_dir="output",
-    num_train_epochs=3,
+    num_train_epochs=1,
     per_device_train_batch_size=8,
     per_device_eval_batch_size=4,
     evaluation_strategy="steps",
