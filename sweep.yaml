@@ -19,4 +19,4 @@ parameters:
     min: 5e-4
     max: 3e-3
   gradient_accumulation_steps:
-    values: [2, 4]
+    values: [1, 2, 4]

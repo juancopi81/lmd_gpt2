@@ -40,7 +40,7 @@ default_config = SimpleNamespace(
     report_to="wandb",
     prediction_loss_only=False,
     push_to_hub=False,
-    gradient_accumulation_steps=1
+    gradient_accumulation_steps=1,
 )
 
 
@@ -155,7 +155,7 @@ def parse_args():
     )
     argparser.add_argument(
         "--gradient_accumulation_steps",
-        type=bool,
+        type=int,
         default=default_config.gradient_accumulation_steps,
         help="gradient accumulation steps to compensate batch size",
     )
