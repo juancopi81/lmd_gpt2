@@ -32,7 +32,7 @@ class CustomTrainer(Trainer):
         # log the prediction distribution using `wandb.Histogram` method.
         if wandb.run is not None:
             input_ids = self.tokenizer.encode(
-                "PIECE_START STYLE=JSFAKES GENRE=JSFAKES TRACK_START",
+                "PIECE_START",
                 return_tensors="pt",
             ).cuda()
             # Generate more tokens.
