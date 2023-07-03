@@ -38,28 +38,28 @@ class CustomTrainer(Trainer):
             # Generate more tokens.
             voice1_generated_ids = self.model.generate(
                 input_ids,
-                max_length=2048,
+                max_new_tokens=512,
                 do_sample=True,
                 temperature=0.75,
                 eos_token_id=self.tokenizer.encode("TRACK_END")[0],
             )
             voice2_generated_ids = self.model.generate(
                 voice1_generated_ids,
-                max_length=2048,
+                max_new_tokens=512,
                 do_sample=True,
                 temperature=0.75,
                 eos_token_id=self.tokenizer.encode("TRACK_END")[0],
             )
             voice3_generated_ids = self.model.generate(
                 voice2_generated_ids,
-                max_length=2048,
+                max_new_tokens=512,
                 do_sample=True,
                 temperature=0.75,
                 eos_token_id=self.tokenizer.encode("TRACK_END")[0],
             )
             voice4_generated_ids = self.model.generate(
                 voice3_generated_ids,
-                max_length=2048,
+                max_new_tokens=512,
                 do_sample=True,
                 temperature=0.75,
                 eos_token_id=self.tokenizer.encode("TRACK_END")[0],
